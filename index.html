@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kebab Time Jember - Kebab Lezat, Halal & Fresh</title>
+    <meta name="description" content="Nikmati kebab terlezat, halal, dan fresh di Jember. Pesan online dengan mudah via WhatsApp atau GoFood. Gratis ongkir area Taman Gading!">
+    <link rel="icon" type="image/png" href="assets/logo.png">
+    
+    <!-- Google Fonts: Poppins & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- External stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- STICKY HEADER -->
+    <header class="header">
+        <div class="container header-container">
+            <a href="/" class="logo-area">
+                <img src="assets/logo.png" alt="Kebab Time Logo" class="logo-img">
+                <span class="logo-text">Kebab<span>Time</span></span>
+            </a>
+            
+            <nav class="nav">
+                <a href="/about" class="nav-link">Tentang</a>
+                <a href="/menu" class="nav-link">Menu</a>
+                <a href="/promo" class="nav-link">Promo</a>
+                <a href="/testimonials" class="nav-link">Ulasan</a>
+                <a href="/locations" class="nav-link">Lokasi</a>
+            </nav>
+            
+            <a href="/menu" class="btn btn-primary btn-sm header-cta">Pesan Sekarang</a>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle Menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- MOBILE NAVIGATION DRAWER -->
+    <div class="mobile-nav" id="mobileNav">
+        <button class="close-mobile-menu" id="closeMobileNav" aria-label="Close Menu">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+        <div class="mobile-nav-links">
+            <a href="/about" class="mobile-link">Tentang Kami</a>
+            <a href="/menu" class="mobile-link">Menu Kebab</a>
+            <a href="/promo" class="mobile-link">Promo Spesial</a>
+            <a href="/testimonials" class="mobile-link">Ulasan Pelanggan</a>
+            <a href="/locations" class="mobile-link">Cabang Kami</a>
+            <a href="/menu" class="btn btn-primary mobile-btn">Pesan Sekarang</a>
+        </div>
+    </div>
+
+    <main>
+        <!-- HERO SECTION -->
+        <section class="hero-section" id="hero">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <div class="hero-badge">
+                        <i class="fa-solid fa-circle-check"></i> 100% Halal & Higienis
+                    </div>
+                    <h1 class="hero-title">Delicious, Halal & Fresh <br><span>Kebab Time</span> di Jember</h1>
+                    <p class="hero-subtitle">Kuliner kebab kekinian dengan daging sapi pilihan melimpah, sayuran segar harian, dan saus racikan rahasia yang bikin nagih.</p>
+                    
+                    <div class="hero-ctas">
+                        <button class="btn btn-primary btn-lg pulse-effect" onclick="openQuickOrder()">
+                            <i class="fa-brands fa-whatsapp"></i> Pesan via WhatsApp
+                        </button>
+                        <a href="/menu" class="btn btn-secondary btn-lg">
+                            <i class="fa-solid fa-utensils"></i> Lihat Menu Kebab
+                        </a>
+                    </div>
+                    
+                    <div class="hero-features">
+                        <div class="feature-badge">
+                            <i class="fa-solid fa-truck-fast text-yellow"></i>
+                            <span><strong>Gratis Ongkir</strong> area Taman Gading (Min. 2 Pcs)</span>
+                        </div>
+                        <div class="feature-badge">
+                            <i class="fa-solid fa-clock text-yellow"></i>
+                            <span>Buka Setiap Hari</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="hero-image-container">
+                    <div class="hero-blob"></div>
+                    <div class="hero-video-wrapper">
+                        <iframe src="https://www.instagram.com/reel/DY_mHORhiD8/embed/" class="hero-video-iframe" frameborder="0" scrolling="no" allowtransparency="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                    </div>
+                    <div class="promo-sticker">
+                        <span class="sticker-top">Mulai Dari</span>
+                        <span class="sticker-price">Rp 9k</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Dynamic Scrolling Banner -->
+            <div class="scrolling-banner">
+                <div class="scroll-content">
+                    DELICIOUS, HALAL & FRESH • KEBAB TIME JEMBER • GRATIS ONGKIR AREA TAMAN GADING • DAGING SAPI MELIMPAH • BUKA SETIAP HARI • CITA RASA PREMIUM GURIH & RENYAH • DELICIOUS, HALAL & FRESH • KEBAB TIME JEMBER • GRATIS ONGKIR AREA TAMAN GADING • DAGING SAPI MELIMPAH • BUKA SETIAP HARI • CITA RASA PREMIUM GURIH & RENYAH •
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT SECTION -->
+        <section class="about-section" id="about">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-tag">Tentang Kami</span>
+                    <h2 class="section-title">Kebab Kaki Lima Cita Rasa Bintang Lima</h2>
+                    <p class="section-desc">Kebab Time adalah UMKM kuliner lokal Jember yang berkomitmen menyajikan kebab berkualitas premium dengan harga bersahabat. Setiap porsi diracik secara higienis menggunakan bahan-bahan segar setiap hari.</p>
+                </div>
+                
+                <div class="about-grid">
+                    <div class="about-card">
+                        <div class="about-icon-box">
+                            <i class="fa-solid fa-certificate"></i>
+                        </div>
+                        <h3>Bahan 100% Halal</h3>
+                        <p>Kami menjamin seluruh bahan baku, mulai dari daging sapi olahan hingga tortila, sepenuhnya bersertifikat Halal.</p>
+                    </div>
+                    <div class="about-card">
+                        <div class="about-icon-box">
+                            <i class="fa-solid fa-leaf"></i>
+                        </div>
+                        <h3>Segar Setiap Hari</h3>
+                        <p>Sayuran disuplai segar setiap pagi dan daging langsung dipanggang untuk menjaga cita rasa otentik yang lezat.</p>
+                    </div>
+                    <div class="about-card">
+                        <div class="about-icon-box">
+                            <i class="fa-solid fa-percent"></i>
+                        </div>
+                        <h3>Harga Terjangkau</h3>
+                        <p>Nikmati kelezatan kebab premium dengan porsi mengenyangkan yang ramah di kantong mahasiswa dan keluarga.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- MENU SECTION -->
+        <section class="menu-section" id="menu">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-tag">Daftar Menu</span>
+                    <h2 class="section-title">Pilih Kebab Favoritmu</h2>
+                    <p class="section-desc">Pilih jenis tortila andalan kami: Kebab Regular yang gurih renyah atau Kebab Hitam (Charcoal) yang unik nan bergizi tinggi.</p>
+                </div>
+                
+                <!-- Menu Tabs -->
+                <div class="menu-tabs">
+                    <button class="menu-tab-btn active" id="tabRegular" onclick="switchMenu('regular')">
+                        <i class="fa-solid fa-bread-slice"></i> Kebab Regular
+                    </button>
+                    <button class="menu-tab-btn" id="tabBlack" onclick="switchMenu('black')">
+                        <i class="fa-solid fa-circle text-dark"></i> Kebab Black (Charcoal)
+                    </button>
+                </div>
+
+                <!-- Regular Kebab Grid -->
+                <div class="menu-grid active" id="menuRegular">
+                    <!-- Item 1 -->
+                    <div class="menu-card">
+                        <div class="menu-card-img-wrapper">
+                            <img src="assets/regular-kebab.png" alt="Kebab Regular Single Beef" class="menu-card-img">
+                            <span class="card-badge">Best Seller</span>
+                        </div>
+                        <div class="menu-card-info">
+                            <h3 class="menu-item-title">Regular Single Beef</h3>
+                            <p class="menu-item-desc">Tortila renyah isi daging sapi panggang gurih, selada segar, bombay, dibalut saus spesial.</p>
+                            <div class="menu-card-footer">
+                                <span class="menu-item-price">Rp 9.000</span>
+                                <button class="btn btn-primary btn-sm btn-order" onclick="openOrderModal('reg-single')">
+                                    <i class="fa-solid fa-cart-shopping"></i> Order
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 2 -->
+                    <div class="menu-card">
+                        <div class="menu-card-img-wrapper">
+                            <img src="assets/regular-kebab.png" alt="Kebab Regular Double Beef" class="menu-card-img">
+                            <span class="card-badge">Ekstra Daging</span>
+                        </div>
+                        <div class="menu-card-info">
+                            <h3 class="menu-item-title">Regular Double Beef</h3>
+                            <p class="menu-item-desc">Tortila renyah dengan isian double porsi daging sapi panggang melimpah untuk kepuasan ganda.</p>
+                            <div class="menu-card-footer">
+                                <span class="menu-item-price">Rp 12.000</span>
+                                <button class="btn btn-primary btn-sm btn-order" onclick="openOrderModal('reg-double')">
+                                    <i class="fa-solid fa-cart-shopping"></i> Order
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 3 -->
+                    <div class="menu-card">
+                        <div class="menu-card-img-wrapper">
+                            <img src="assets/regular-kebab.png" alt="Kebab Regular Special" class="menu-card-img">
+                            <span class="card-badge">Pakai Telur</span>
+                        </div>
+                        <div class="menu-card-info">
+                            <h3 class="menu-item-title">Regular Special (Telor)</h3>
+                            <p class="menu-item-desc">Kebab regular gurih dengan tambahan isian daging sapi dan telur ayam goreng dadar yang lezat.</p>
+                            <div class="menu-card-footer">
+                                <span class="menu-item-price">Rp 15.000</span>
+                                <button class="btn btn-primary btn-sm btn-order" onclick="openOrderModal('reg-special')">
+                                    <i class="fa-solid fa-cart-shopping"></i> Order
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 4 -->
+                    <div class="menu-card">
+                        <div class="menu-card-img-wrapper">
+                            <img src="assets/regular-kebab.png" alt="Kebab Regular Premium" class="menu-card-img">
+                            <span class="card-badge">Super Lengkap</span>
+                        </div>
+                        <div class="menu-card-info">
+                            <h3 class="menu-item-title">Regular Premium</h3>
+                            <p class="menu-item-desc">Kebab istimewa berisi daging sapi panggang, telur puyuh gurih, dan keju slice meleleh.</p>
+                            <div class="menu-card-footer">
+                                <span class="menu-item-price">Rp 15.000</span>
+                                <button class="btn btn-primary btn-sm btn-order" onclick="openOrderModal('reg-premium')">
+                                    <i class="fa-solid fa-cart-shopping"></i> Order
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Black Kebab Grid -->
+                <div class="menu-grid" id="menuBlack">
+                    <!-- Item 1 -->
+                    <div class="menu-card">
+                        <div class="menu-card-img-wrapper">
+                            <img src="assets/black-kebab.png" alt="Kebab Black Single Beef" class="menu-card-img">
+                            <span class="card-badge bg-black">Charcoal Trend</span>
+                        </div>
+                        <div class="menu-card-info">
+                            <h3 class="menu-item-title">Black Single Beef</h3>
+                            <p class="menu-item-desc">Tortila hitam arang bambu aktif yang kaya manfaat, isi daging sapi gurih dan sayuran segar.</p>
+                            <div class="menu-card-footer">
+                                <span class="menu-item-price">Rp 11.000</span>
+                                <button class="btn btn-primary btn-sm btn-order" onclick="openOrderModal('black-single')">
+                                    <i class="fa-solid fa-cart-shopping"></i> Order
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 2 -->
+                    <div class="menu-card">
+                        <div class="menu-card-img-wrapper">
+                            <img src="assets/black-kebab.png" alt="Kebab Black Double Beef" class="menu-card-img">
+                            <span class="card-badge bg-black">Rekomendasi</span>
+                        </div>
+                        <div class="menu-card-info">
+                            <h3 class="menu-item-title">Black Double Beef</h3>
+                            <p class="menu-item-desc">Sensasi unik tortila hitam berpadu dengan porsi daging sapi panggang ekstra tebal.</p>
+                            <div class="menu-card-footer">
+                                <span class="menu-item-price">Rp 14.000</span>
+                                <button class="btn btn-primary btn-sm btn-order" onclick="openOrderModal('black-double')">
+                                    <i class="fa-solid fa-cart-shopping"></i> Order
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 3 -->
+                    <div class="menu-card">
+                        <div class="menu-card-img-wrapper">
+                            <img src="assets/black-kebab.png" alt="Kebab Black Special" class="menu-card-img">
+                            <span class="card-badge bg-black">Favorit</span>
+                        </div>
+                        <div class="menu-card-info">
+                            <h3 class="menu-item-title">Black Special (Telor)</h3>
+                            <p class="menu-item-desc">Kebab hitam charcoal dengan isian daging sapi dan telur ayam goreng untuk rasa mantap.</p>
+                            <div class="menu-card-footer">
+                                <span class="menu-item-price">Rp 17.000</span>
+                                <button class="btn btn-primary btn-sm btn-order" onclick="openOrderModal('black-special')">
+                                    <i class="fa-solid fa-cart-shopping"></i> Order
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 4 -->
+                    <div class="menu-card">
+                        <div class="menu-card-img-wrapper">
+                            <img src="assets/black-kebab.png" alt="Kebab Black Premium" class="menu-card-img">
+                            <span class="card-badge bg-black">Premium</span>
+                        </div>
+                        <div class="menu-card-info">
+                            <h3 class="menu-item-title">Black Premium</h3>
+                            <p class="menu-item-desc">Menu termewah kami: Tortila hitam berisi daging sapi, telur puyuh gurih, dan keju meleleh.</p>
+                            <div class="menu-card-footer">
+                                <span class="menu-item-price">Rp 17.000</span>
+                                <button class="btn btn-primary btn-sm btn-order" onclick="openOrderModal('black-premium')">
+                                    <i class="fa-solid fa-cart-shopping"></i> Order
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Extra Toppings Box -->
+                <div class="toppings-section">
+                    <h3 class="toppings-title"><i class="fa-solid fa-circle-plus text-yellow"></i> Tambah Ekstra Topping Biar Makin Mantap!</h3>
+                    <div class="toppings-grid">
+                        <div class="topping-item">
+                            <span class="topping-name">Telur Ayam</span>
+                            <span class="topping-price">+Rp 3.000</span>
+                        </div>
+                        <div class="topping-item">
+                            <span class="topping-name">Telur Puyuh</span>
+                            <span class="topping-price">+Rp 3.000</span>
+                        </div>
+                        <div class="topping-item">
+                            <span class="topping-name">Keju Slice</span>
+                            <span class="topping-price">+Rp 2.000</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROMO SECTION -->
+        <section class="promo-section" id="promo">
+            <div class="container">
+                <div class="promo-banner">
+                    <div class="promo-info">
+                        <span class="promo-badge">HOT PROMO</span>
+                        <h2 class="promo-title">Gratis Ongkir Area Taman Gading!</h2>
+                        <p class="promo-desc">Males keluar rumah? Tenang! Kebab Time kasih promo Gratis Ongkir khusus buat kamu yang berada di area Perumahan Taman Gading Jember dengan minimal pembelian 2 kebab jenis apa saja.</p>
+                        <div class="promo-bullets">
+                            <div class="promo-bullet"><i class="fa-solid fa-circle-check"></i> Minimal 2 Pcs Kebab</div>
+                            <div class="promo-bullet"><i class="fa-solid fa-circle-check"></i> Khusus Wilayah Taman Gading</div>
+                            <div class="promo-bullet"><i class="fa-solid fa-circle-check"></i> Pengiriman Cepat & Masih Hangat</div>
+                        </div>
+                        <button class="btn btn-black btn-lg" onclick="openQuickOrder()">Pesan Antar Sekarang</button>
+                    </div>
+                    <div class="promo-graphics">
+                        <i class="fa-solid fa-motorcycle promo-icon"></i>
+                        <span class="free-delivery-badge">FREE DELIVERY</span>
+                    </div>
+                </div>
+            </div>
+        <!-- TESTIMONIALS SECTION -->
+        <section class="testimonials-section" id="testimonials">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-tag">Ulasan GoFood</span>
+                    <h2 class="section-title">Ulasan Pelanggan Bintang 5</h2>
+                    <p class="section-desc">Testimoni asli dari pelanggan setia Kebab Time Jember yang diambil langsung dari ulasan bintang 5 aplikasi GoFood.</p>
+                </div>
+                
+                <div class="slider-container">
+                    <div class="slider-wrapper" id="testimonialSlider">
+                        <!-- Slide 1 -->
+                        <div class="testimonial-slide active">
+                            <div class="testimonials-grid">
+                                <!-- Card 1 -->
+                                <div class="testimonial-card">
+                                    <div class="stars">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <span class="rating-val">5.0</span>
+                                    </div>
+                                    <p class="testimonial-text">"ENAK BGTTT TOPP DEH, PDAHAL FIRST TIME BELI🩷🩷🩷🩷🩷"</p>
+                                    <div class="ordered-items"><i class="fa-solid fa-utensils"></i> Kebab Original</div>
+                                    <div class="reviewer-info">
+                                        <div class="reviewer-avatar"><i class="fa-solid fa-user"></i></div>
+                                        <div>
+                                            <h4 class="reviewer-name">Nabila</h4>
+                                            <span class="reviewer-status">Pengguna Gojek sejak 1 Agustus 2020</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Card 2 -->
+                                <div class="testimonial-card">
+                                    <div class="stars">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <span class="rating-val">5.0</span>
+                                    </div>
+                                    <p class="testimonial-text">"mantap deh rasanya bikin nagih"</p>
+                                    <div class="ordered-items"><i class="fa-solid fa-utensils"></i> Kebab Original</div>
+                                    <div class="reviewer-info">
+                                        <div class="reviewer-avatar"><i class="fa-solid fa-user"></i></div>
+                                        <div>
+                                            <h4 class="reviewer-name">Ayla Shae</h4>
+                                            <span class="reviewer-status">Pengguna Gojek sejak 9 Agustus 2025</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Card 3 -->
+                                <div class="testimonial-card">
+                                    <div class="stars">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <span class="rating-val">5.0</span>
+                                    </div>
+                                    <p class="testimonial-text">"selalu enak murce gede full isiane masyaallah dari awal order sampek sekarang selalu ketagihan"</p>
+                                    <div class="ordered-items"><i class="fa-solid fa-utensils"></i> Kebab Premium - Matcha</div>
+                                    <div class="reviewer-info">
+                                        <div class="reviewer-avatar"><i class="fa-solid fa-user"></i></div>
+                                        <div>
+                                            <h4 class="reviewer-name">Dyah Ayu Nawangwulan</h4>
+                                            <span class="reviewer-status">Pengguna Gojek sejak 10 Maret 2020</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Slide 2 -->
+                        <div class="testimonial-slide">
+                            <div class="testimonials-grid">
+                                <!-- Card 4 -->
+                                <div class="testimonial-card">
+                                    <div class="stars">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <span class="rating-val">5.0</span>
+                                    </div>
+                                    <p class="testimonial-text">"mantab keren uenak poll"</p>
+                                    <div class="ordered-items"><i class="fa-solid fa-utensils"></i> Kebab Premium - Matcha</div>
+                                    <div class="reviewer-info">
+                                        <div class="reviewer-avatar"><i class="fa-solid fa-user"></i></div>
+                                        <div>
+                                            <h4 class="reviewer-name">hendra arianda</h4>
+                                            <span class="reviewer-status">Pengguna Gojek sejak 22 Oktober 2018</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Card 5 -->
+                                <div class="testimonial-card">
+                                    <div class="stars">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <span class="rating-val">5.0</span>
+                                    </div>
+                                    <p class="testimonial-text">"sangat memuaskan"</p>
+                                    <div class="ordered-items"><i class="fa-solid fa-utensils"></i> Kebab Special - Double Beef</div>
+                                    <div class="reviewer-info">
+                                        <div class="reviewer-avatar"><i class="fa-solid fa-user"></i></div>
+                                        <div>
+                                            <h4 class="reviewer-name">Dyah Ayu Nawangwulan</h4>
+                                            <span class="reviewer-status">Pengguna Gojek sejak 10 Maret 2020</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Card 6 -->
+                                <div class="testimonial-card">
+                                    <div class="stars">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <span class="rating-val">5.0</span>
+                                    </div>
+                                    <p class="testimonial-text">"dagingnya full, rasanya pas banegtt endull pokok nyaa dehh"</p>
+                                    <div class="ordered-items"><i class="fa-solid fa-utensils"></i> Double Beef Kebab</div>
+                                    <div class="reviewer-info">
+                                        <div class="reviewer-avatar"><i class="fa-solid fa-user"></i></div>
+                                        <div>
+                                            <h4 class="reviewer-name">M****** A** A***</h4>
+                                            <span class="reviewer-status">Pengguna Gojek sejak 1 Maret 2025</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Slide 3 -->
+                        <div class="testimonial-slide">
+                            <div class="testimonials-grid">
+                                <!-- Card 7 -->
+                                <div class="testimonial-card">
+                                    <div class="stars">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <span class="rating-val">5.0</span>
+                                    </div>
+                                    <p class="testimonial-text">"gatau rasanya sii soalnya aku kasi ke crush aku wkwkkk, dia terharu jadi aku anggep enakk gojeknya btw cepet bangetss sayy thanks yaa"</p>
+                                    <div class="ordered-items"><i class="fa-solid fa-utensils"></i> Kebab Special</div>
+                                    <div class="reviewer-info">
+                                        <div class="reviewer-avatar"><i class="fa-solid fa-user"></i></div>
+                                        <div>
+                                            <h4 class="reviewer-name">syirinnada</h4>
+                                            <span class="reviewer-status">Pengguna Gojek sejak 18 Maret 2024</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Card 8 -->
+                                <div class="testimonial-card">
+                                    <div class="stars">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <span class="rating-val">5.0</span>
+                                    </div>
+                                    <p class="testimonial-text">"Rasa dan bahan premium banget, kemasan bagus banget. Recomended"</p>
+                                    <div class="ordered-items"><i class="fa-solid fa-utensils"></i> Double Beef - Kebab Special</div>
+                                    <div class="reviewer-info">
+                                        <div class="reviewer-avatar"><i class="fa-solid fa-user"></i></div>
+                                        <div>
+                                            <h4 class="reviewer-name">Tiara Maulita</h4>
+                                            <span class="reviewer-status">Pengguna Gojek sejak 26 September 2017</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Card 9 -->
+                                <div class="testimonial-card">
+                                    <div class="stars">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <span class="rating-val">5.0</span>
+                                    </div>
+                                    <p class="testimonial-text">"enak banget dagingnya tebel dan daging banget bukan yang merah itu, maaf ya aku order last time banget wkwkwkw abisnya laper"</p>
+                                    <div class="ordered-items"><i class="fa-solid fa-utensils"></i> Double Beef Kebab</div>
+                                    <div class="reviewer-info">
+                                        <div class="reviewer-avatar"><i class="fa-solid fa-user"></i></div>
+                                        <div>
+                                            <h4 class="reviewer-name">Charisma</h4>
+                                            <span class="reviewer-status">Pengguna Gojek sejak 1 April 2018</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Slider Controls -->
+                    <div class="slider-controls">
+                        <button class="slider-arrow prev" onclick="moveSlide(-1)" aria-label="Sebelumnya"><i class="fa-solid fa-chevron-left"></i></button>
+                        <div class="slider-dots" id="sliderDots"></div>
+                        <button class="slider-arrow next" onclick="moveSlide(1)" aria-label="Selanjutnya"><i class="fa-solid fa-chevron-right"></i></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- LOCATIONS SECTION -->
+        <section class="locations-section" id="locations">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-tag">Cabang Kami</span>
+                    <h2 class="section-title">Kunjungi Outlet Kebab Time</h2>
+                    <p class="section-desc">Kami siap melayani Anda di dua cabang strategis di wilayah Jember. Silakan mampir atau pesan bawa pulang.</p>
+                </div>
+                
+                <div class="locations-grid">
+                    <!-- Branch 1 -->
+                    <div class="location-card">
+                        <div class="location-badge"><i class="fa-solid fa-store"></i> Cabang Utama</div>
+                        <h3>Cabang Taman Gading</h3>
+                        <p class="address"><i class="fa-solid fa-location-dot"></i> Perum Taman Gading Blok O-11, Jember</p>
+                        <div class="hours"><i class="fa-solid fa-clock"></i> <strong>Jam Operasional:</strong> 16:00 - 21:30 WIB</div>
+                        
+                        <div class="map-embed-wrapper">
+                            <iframe src="https://maps.google.com/maps?q=-8.2011397,113.7060652&t=&z=15&ie=UTF8&iwloc=&output=embed" class="map-iframe" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+                        
+                        <div class="location-actions">
+                            <a href="https://maps.app.goo.gl/Ti8jxNBTqQy85V6N9" target="_blank" class="btn btn-outline btn-sm">
+                                <i class="fa-solid fa-map-location-dot"></i> Google Maps
+                            </a>
+                            <a href="https://gofood.co.id/jember/restaurant/kebab-time-perum-taman-gading-blok-o-11-0f3d1a60-a7ae-4e5b-986c-74e541f1ac67" target="_blank" class="btn btn-gofood btn-sm">
+                                <i class="fa-solid fa-motorcycle"></i> Order GoFood
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Branch 2 -->
+                    <div class="location-card">
+                        <div class="location-badge"><i class="fa-solid fa-store"></i> Cabang Gebang</div>
+                        <h3>Cabang Manggar Gebang</h3>
+                        <p class="address"><i class="fa-solid fa-location-dot"></i> Jl. Manggar No. 183, Gebang, Jember</p>
+                        <div class="hours"><i class="fa-solid fa-clock"></i> <strong>Jam Operasional:</strong> 11:00 - 21:30 WIB</div>
+                        
+                        <div class="map-embed-wrapper">
+                            <iframe src="https://maps.google.com/maps?q=-8.1572275,113.6930964&t=&z=15&ie=UTF8&iwloc=&output=embed" class="map-iframe" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+                        
+                        <div class="location-actions">
+                            <a href="https://maps.app.goo.gl/RkX1QcfK6Xt7FCm3A" target="_blank" class="btn btn-outline btn-sm">
+                                <i class="fa-solid fa-map-location-dot"></i> Google Maps
+                            </a>
+                            <a href="https://gofood.co.id/jember/restaurant/kebab-time-gebang-6645f7fe-ae20-4428-b995-adca3bede868" target="_blank" class="btn btn-gofood btn-sm">
+                                <i class="fa-solid fa-motorcycle"></i> Order GoFood
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SOCIAL MEDIA SECTION -->
+        <section class="social-section">
+            <div class="container text-center">
+                <h2>Ikuti Keseruan Kebab Time di Medsos!</h2>
+                <p>Dapatkan update promo harian, konten menarik, dan give-away di Instagram dan TikTok kami.</p>
+                <div class="social-buttons">
+                    <a href="https://instagram.com/kebab_time.jbr" target="_blank" class="social-btn instagram">
+                        <i class="fa-brands fa-instagram"></i> @kebab_time.jbr
+                    </a>
+                    <a href="https://tiktok.com/@kebab_time.jbr" target="_blank" class="social-btn tiktok">
+                        <i class="fa-brands fa-tiktok"></i> @kebab_time.jbr
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER / ORDER HUB -->
+    <footer class="footer">
+        <div class="container text-center">
+            <a href="/" class="logo-area footer-logo justify-center">
+                <img src="assets/logo.png" alt="Kebab Time Logo" class="logo-img">
+                <span class="logo-text">Kebab<span>Time</span></span>
+            </a>
+            <p class="footer-tagline">“Delicious, Halal & Fresh Kebab in Jember”</p>
+            
+            <div class="footer-ctas">
+                <h3>Sudah Lapar? Hubungi Kami Sekarang!</h3>
+                <div class="footer-buttons">
+                    <button class="btn btn-primary btn-lg pulse-effect" onclick="openQuickOrder()">
+                        <i class="fa-brands fa-whatsapp"></i> Chat WhatsApp
+                    </button>
+                    <a href="/locations" class="btn btn-gofood btn-lg">
+                        <i class="fa-solid fa-motorcycle"></i> Pesan via GoFood
+                    </a>
+                </div>
+            </div>
+            
+            <hr class="footer-divider">
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 Kebab Time Jember. Hak Cipta Dilindungi. UMKM Kuliner Juara.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- STICKY WHATSAPP FLOATING BUTTON -->
+    <a href="javascript:void(0)" class="sticky-wa" onclick="openQuickOrder()" aria-label="Order WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+        <span class="tooltip-text">Pesan Kebab Sekarang! 👋</span>
+    </a>
+
+    <!-- ORDER CONFIGURATOR MODAL -->
+    <div class="modal-backdrop" id="orderModal">
+        <div class="modal">
+            <button class="modal-close" onclick="closeOrderModal()" aria-label="Tutup"><i class="fa-solid fa-xmark"></i></button>
+            <div class="modal-header">
+                <h3 id="modalItemTitle">Konfigurasi Pesanan Kebab</h3>
+                <p id="modalItemDesc" class="modal-item-desc">Pilih menu kebab, tambahkan topping, cabang terdekat, dan catatan Anda.</p>
+            </div>
+            <div class="modal-body">
+                <!-- Multi-Item Menu Selection -->
+                <div class="form-group">
+                    <label class="form-label">Pilih Menu Kebab (Bisa lebih dari satu)</label>
+                    <div class="modal-menu-list">
+                        <!-- Group Regular -->
+                        <div class="modal-menu-group-title"><i class="fa-solid fa-bread-slice text-red"></i> Kebab Regular</div>
+                        <div class="modal-menu-item" data-id="reg-single">
+                            <div class="modal-menu-item-info">
+                                <span class="modal-menu-item-name">Regular Single Beef</span>
+                                <span class="modal-menu-item-price">Rp 9.000</span>
+                            </div>
+                            <div class="modal-menu-item-qty">
+                                <button class="modal-qty-btn" onclick="adjustItemQty('reg-single', -1)" type="button" aria-label="Kurang"><i class="fa-solid fa-minus"></i></button>
+                                <span class="modal-qty-val" id="qty_reg-single">0</span>
+                                <button class="modal-qty-btn" onclick="adjustItemQty('reg-single', 1)" type="button" aria-label="Tambah"><i class="fa-solid fa-plus"></i></button>
+                            </div>
+                        </div>
+                        <div class="modal-menu-item" data-id="reg-double">
+                            <div class="modal-menu-item-info">
+                                <span class="modal-menu-item-name">Regular Double Beef</span>
+                                <span class="modal-menu-item-price">Rp 12.000</span>
+                            </div>
+                            <div class="modal-menu-item-qty">
+                                <button class="modal-qty-btn" onclick="adjustItemQty('reg-double', -1)" type="button" aria-label="Kurang"><i class="fa-solid fa-minus"></i></button>
+                                <span class="modal-qty-val" id="qty_reg-double">0</span>
+                                <button class="modal-qty-btn" onclick="adjustItemQty('reg-double', 1)" type="button" aria-label="Tambah"><i class="fa-solid fa-plus"></i></button>
+                            </div>
+                        </div>
+                        <div class="modal-menu-item" data-id="reg-special">
+                            <div class="modal-menu-item-info">
+                                <span class="modal-menu-item-name">Regular Special (Telor)</span>
+                                <span class="modal-menu-item-price">Rp 15.000</span>
+                            </div>
+                            <div class="modal-menu-item-qty">
+                                <button class="modal-qty-btn" onclick="adjustItemQty('reg-special', -1)" type="button" aria-label="Kurang"><i class="fa-solid fa-minus"></i></button>
+                                <span class="modal-qty-val" id="qty_reg-special">0</span>
+                                <button class="modal-qty-btn" onclick="adjustItemQty('reg-special', 1)" type="button" aria-label="Tambah"><i class="fa-solid fa-plus"></i></button>
+                            </div>
+                        </div>
+                        <div class="modal-menu-item" data-id="reg-premium">
+                            <div class="modal-menu-item-info">
+                                <span class="modal-menu-item-name">Regular Premium</span>
+                                <span class="modal-menu-item-price">Rp 15.000</span>
+                            </div>
+                            <div class="modal-menu-item-qty">
+                                <button class="modal-qty-btn" onclick="adjustItemQty('reg-premium', -1)" type="button" aria-label="Kurang"><i class="fa-solid fa-minus"></i></button>
+                                <span class="modal-qty-val" id="qty_reg-premium">0</span>
+                                <button class="modal-qty-btn" onclick="adjustItemQty('reg-premium', 1)" type="button" aria-label="Tambah"><i class="fa-solid fa-plus"></i></button>
+                            </div>
+                        </div>
+
+                        <!-- Group Black -->
+                        <div class="modal-menu-group-title"><i class="fa-solid fa-circle text-black"></i> Kebab Black (Charcoal)</div>
+                        <div class="modal-menu-item" data-id="black-single">
+                            <div class="modal-menu-item-info">
+                                <span class="modal-menu-item-name">Black Single Beef</span>
+                                <span class="modal-menu-item-price">Rp 11.000</span>
+                            </div>
+                            <div class="modal-menu-item-qty">
+                                <button class="modal-qty-btn" onclick="adjustItemQty('black-single', -1)" type="button" aria-label="Kurang"><i class="fa-solid fa-minus"></i></button>
+                                <span class="modal-qty-val" id="qty_black-single">0</span>
+                                <button class="modal-qty-btn" onclick="adjustItemQty('black-single', 1)" type="button" aria-label="Tambah"><i class="fa-solid fa-plus"></i></button>
+                            </div>
+                        </div>
+                        <div class="modal-menu-item" data-id="black-double">
+                            <div class="modal-menu-item-info">
+                                <span class="modal-menu-item-name">Black Double Beef</span>
+                                <span class="modal-menu-item-price">Rp 14.000</span>
+                            </div>
+                            <div class="modal-menu-item-qty">
+                                <button class="modal-qty-btn" onclick="adjustItemQty('black-double', -1)" type="button" aria-label="Kurang"><i class="fa-solid fa-minus"></i></button>
+                                <span class="modal-qty-val" id="qty_black-double">0</span>
+                                <button class="modal-qty-btn" onclick="adjustItemQty('black-double', 1)" type="button" aria-label="Tambah"><i class="fa-solid fa-plus"></i></button>
+                            </div>
+                        </div>
+                        <div class="modal-menu-item" data-id="black-special">
+                            <div class="modal-menu-item-info">
+                                <span class="modal-menu-item-name">Black Special (Telor)</span>
+                                <span class="modal-menu-item-price">Rp 17.000</span>
+                            </div>
+                            <div class="modal-menu-item-qty">
+                                <button class="modal-qty-btn" onclick="adjustItemQty('black-special', -1)" type="button" aria-label="Kurang"><i class="fa-solid fa-minus"></i></button>
+                                <span class="modal-qty-val" id="qty_black-special">0</span>
+                                <button class="modal-qty-btn" onclick="adjustItemQty('black-special', 1)" type="button" aria-label="Tambah"><i class="fa-solid fa-plus"></i></button>
+                            </div>
+                        </div>
+                        <div class="modal-menu-item" data-id="black-premium">
+                            <div class="modal-menu-item-info">
+                                <span class="modal-menu-item-name">Black Premium</span>
+                                <span class="modal-menu-item-price">Rp 17.000</span>
+                            </div>
+                            <div class="modal-menu-item-qty">
+                                <button class="modal-qty-btn" onclick="adjustItemQty('black-premium', -1)" type="button" aria-label="Kurang"><i class="fa-solid fa-minus"></i></button>
+                                <span class="modal-qty-val" id="qty_black-premium">0</span>
+                                <button class="modal-qty-btn" onclick="adjustItemQty('black-premium', 1)" type="button" aria-label="Tambah"><i class="fa-solid fa-plus"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Toppings Checkboxes -->
+                <div class="form-group">
+                    <label class="form-label">Tambahan Topping (Opsional)</label>
+                    <span class="help-text" style="color: var(--gray-700); margin-bottom: 8px; font-weight: 500; display: block;"><i class="fa-solid fa-circle-info text-yellow"></i> Ditambahkan ke total pesanan (tulis di catatan untuk kebab mana)</span>
+                    <div class="toppings-options">
+                        <label class="topping-option">
+                            <input type="checkbox" value="Telor Ayam" data-price="3000" onchange="calculateTotal()" class="topping-cb">
+                            <span class="topping-option-content">
+                                <span>Telur Ayam</span>
+                                <span class="price-add">+Rp 3.000</span>
+                            </span>
+                        </label>
+                        <label class="topping-option">
+                            <input type="checkbox" value="Telor Puyuh" data-price="3000" onchange="calculateTotal()" class="topping-cb">
+                            <span class="topping-option-content">
+                                <span>Telur Puyuh</span>
+                                <span class="price-add">+Rp 3.000</span>
+                            </span>
+                        </label>
+                        <label class="topping-option">
+                            <input type="checkbox" value="Keju Slice" data-price="2000" onchange="calculateTotal()" class="topping-cb">
+                            <span class="topping-option-content">
+                                <span>Keju Slice</span>
+                                <span class="price-add">+Rp 2.000</span>
+                            </span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Branch Selection -->
+                <div class="form-group">
+                    <label class="form-label">Pilih Cabang Pengiriman / Pengambilan</label>
+                    <div class="branch-selector">
+                        <label class="branch-option">
+                            <input type="radio" name="orderBranch" value="Taman Gading" checked>
+                            <span class="branch-option-content">
+                                <strong>Taman Gading</strong>
+                                <span>(Bisa Delivery)</span>
+                            </span>
+                        </label>
+                        <label class="branch-option">
+                            <input type="radio" name="orderBranch" value="Gebang">
+                            <span class="branch-option-content">
+                                <strong>Gebang</strong>
+                                <span>(Bawa Pulang)</span>
+                            </span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Order Type (Delivery or Takeaway) -->
+                <div class="form-group">
+                    <label class="form-label">Metode</label>
+                    <div class="method-selector">
+                        <label class="method-option">
+                            <input type="radio" name="orderMethod" value="Delivery" checked onchange="toggleAddressField()">
+                            <span class="method-option-content">
+                                <i class="fa-solid fa-truck-fast"></i> Delivery (Kirim)
+                            </span>
+                        </label>
+                        <label class="method-option">
+                            <input type="radio" name="orderMethod" value="Ambil" onchange="toggleAddressField()">
+                            <span class="method-option-content">
+                                <i class="fa-solid fa-bag-shopping"></i> Ambil Sendiri
+                            </span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Address Input (only for Delivery) -->
+                <div class="form-group" id="addressGroup">
+                    <label class="form-label" for="orderAddress">Alamat Pengiriman (Khusus Jember)</label>
+                    <textarea class="form-control" id="orderAddress" placeholder="Masukkan nama jalan, perumahan, nomor rumah, atau patokan lokasi..."></textarea>
+                    <span class="help-text text-yellow"><i class="fa-solid fa-info-circle"></i> Gratis Ongkir untuk area Perum Taman Gading minimal 2 Pcs!</span>
+                </div>
+
+                <!-- Notes Input -->
+                <div class="form-group">
+                    <label class="form-label" for="orderNotes">Catatan Pesanan (Notes)</label>
+                    <textarea class="form-control" id="orderNotes" placeholder="Contoh: Kebab regular jangan terlalu pedas, keju ditaruh di regular beef saja, dll..."></textarea>
+                </div>
+
+                <!-- Name Input -->
+                <div class="form-group">
+                    <label class="form-label" for="orderName">Nama Pemesan</label>
+                    <input type="text" class="form-control" id="orderName" placeholder="Masukkan nama Anda...">
+                </div>
+            </div>
+
+            <!-- Modal Footer with Total & CTA -->
+            <div class="modal-footer">
+                <div class="modal-total">
+                    <span>Total Pembayaran:</span>
+                    <span class="total-price" id="modalTotalVal">Rp 0</span>
+                </div>
+                <button class="btn btn-primary btn-block btn-lg" onclick="sendWhatsAppOrder()">
+                    <i class="fa-brands fa-whatsapp"></i> Kirim Pesanan via WhatsApp
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Custom Toast Notifications Container -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <!-- External JavaScript file -->
+    <script src="app.js"></script>
+</body>
+</html>
