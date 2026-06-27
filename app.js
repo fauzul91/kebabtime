@@ -10,10 +10,10 @@ const MENU_ITEMS = {
     "reg-double": { name: "Regular Double Beef", price: 12000 },
     "reg-special": { name: "Regular Special (Telor)", price: 15000 },
     "reg-premium": { name: "Regular Premium", price: 15000 },
-    "black-single": { name: "Black Single Beef", price: 11000 },
-    "black-double": { name: "Black Double Beef", price: 14000 },
-    "black-special": { name: "Black Special (Telor)", price: 17000 },
-    "black-premium": { name: "Black Premium", price: 17000 }
+    "black-single": { name: "Black Single Beef", price: 9000 },
+    "black-double": { name: "Black Double Beef", price: 12000 },
+    "black-special": { name: "Black Special (Telor)", price: 15000 },
+    "black-premium": { name: "Black Premium", price: 15000 }
 };
 
 // Global Order State
